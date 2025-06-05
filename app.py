@@ -12,10 +12,9 @@ app = Flask(__name__)
 @app.route('/forecast', methods=['GET'])
 def get_basic_forecast():
     data = get_weather()
-    new_forecast = Forecast(data)
-    repository = ForecastRepository()
-    result = repository.sort_forecast_into_days(new_forecast)
-    return result
+    repository = ForecastRepository(data)
+    week = repository.sort_forecast_into_days()
+    return week
 
 
 # ---------- Routes Finish ---------
