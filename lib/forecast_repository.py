@@ -15,6 +15,6 @@ class ForecastRepository():
         count  = 0
         while count < 7:
             day = Forecast(self.all_times[count], self.all_max_temps[count], self.all_min_temps[count], self.all_weather_codes[count])
-            self.seven_days.append(str(day))
+            self.seven_days.append(day)
             count += 1
         return self.seven_days
