@@ -12,4 +12,4 @@ class Forecast:
     
     # Print the forecast object nicely
     def __repr__(self):
-        return f"Forecast(time: {self.time}, maximum temperature: {self.max_temp}, minimum temperature: {self.min_temp}, weather codes: {self.weather_code})"
+        return f"Forecast(time: {self.time}, maximum temperature: {self.max_temp}, minimum temperature: {self.min_temp}, weather code: {self.weather_code})"
