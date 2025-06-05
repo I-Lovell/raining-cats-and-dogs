@@ -7,7 +7,11 @@
 </head>
 <body>
     <div class="week-layout">
-        
+        {% for day in week %}
+            <div>
+                <p>The maximum temperature is: {{ day.max_temp }}</p>
+            </div>
+        {% endfor %}
     </div>
 </body>
 </html>
