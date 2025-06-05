@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It's Raining Cats and Dogs!</title>
+</head>
+<body>
+    <div class="week-layout">
+        {% for day in week %}
+            <div>
+                <p>The maximum temperature is: {{ day.max_temp }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
