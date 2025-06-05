@@ -1,5 +1,5 @@
 import os
-from flask import Flask
+from flask import Flask, render_template
 from lib.forecast_repository import ForecastRepository
 from lib.forecast import Forecast
 from lib.get_weather import get_weather
@@ -14,8 +14,8 @@ def get_basic_forecast():
     data = get_weather()
     new_forecast = Forecast(data)
     repository = ForecastRepository()
-    result = repository.sort_forecast_into_days(new_forecast)
-    return result
+    week = repository.sort_forecast_into_days(new_forecast)
+    return render_template("index.html", week=week)
 
 
 # ---------- Routes Finish ---------
