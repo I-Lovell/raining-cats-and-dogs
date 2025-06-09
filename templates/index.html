@@ -4,12 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>It's Raining Cats and Dogs!</title>
+    <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
+
+<div class="header">
+    <h1>It's Raining Cats and Dogs!</h1>
+</div>
+
     <div class="week-layout">
         {% for day in week %}
             <div>
-                <p>The maximum temperature is: {{ day.max_temp }}</p>
+                <li class="date">date: {{ day.time }}</li>
+                <li class="weather_code">weather code: {{ day.weather_code }}</li>
+                <li class="max_temp">max temp: {{ day.max_temp }}</li>
+                <li class="min_temp">min temp: {{ day.min_temp }}</li>
             </div>
         {% endfor %}
     </div>
