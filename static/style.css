@@ -1,0 +1,48 @@
+body {
+    margin: 0px;
+}
+
+.header {
+    background-color: #00b8a5;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.header h1 {
+    text-align: center;
+}
+
+.week-layout {
+    margin: 5rem auto;
+    width: min(90%, 75rem);
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 2fr repeat(6, 1fr);
+    gap: 1em;
+
+
+    background-color: #b8e1ff;
+    padding: 1rem;
+}
+
+.week-layout div {
+    min-height: 20rem;
+
+    display: grid;
+    height: 100%;
+    grid-template-rows: 1fr 2fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    
+
+    background-color: #94fbab;
+    list-style-type: none;
+}
+
+.date {
+    grid-column: span 2;
+}
+
+.weather_code {
+    grid-column: span 2;
+}
