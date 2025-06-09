@@ -46,3 +46,7 @@ body {
 .weather_code {
     grid-column: span 2;
 }
+
+.weather_code img {
+    max-width: 100%;
+}
