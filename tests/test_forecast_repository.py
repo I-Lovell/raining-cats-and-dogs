@@ -25,4 +25,13 @@ corectly sorts 7 days worth of data into a list of seven dictionaries
 def test_sort_forecast_into_days():
     repository = ForecastRepository(forecast2)
     formatted_forecast = repository.sort_forecast_into_days()
-    assert formatted_forecast == [Forecast('2025-04-04', 15.1, 9.7, 0), Forecast('2025-04-05', 13.7, 12.8, 61), Forecast('2025-04-06', 21.2, 10.2, 2), Forecast('2025-04-07', 17.9, 8.1, 0), Forecast('2025-04-08', 13.7, 10.5, 51), Forecast('2025-04-09', 14.4, 7.3, 80), Forecast('2025-04-10', 19.2, 9.9, 3)]
+    assert formatted_forecast == [Forecast('Friday 04 Apr', 15.1, 9.7, 0), Forecast('Saturday 05 Apr', 13.7, 12.8, 61), Forecast('Sunday 06 Apr', 21.2, 10.2, 2), Forecast('Monday 07 Apr', 17.9, 8.1, 0), Forecast('Tuesday 08 Apr', 13.7, 10.5, 51), Forecast('Wednesday 09 Apr', 14.4, 7.3, 80), Forecast('Thursday 10 Apr', 19.2, 9.9, 3)]
+
+"""
+Test forecast repository format_date method
+correctly converts dates into the desired format (example: "Tuesday 12 Mar")
+"""
+def test_format_date():
+    repository = ForecastRepository(forecast1)
+    formatted_dates = repository.format_date(repository.all_times)
+    assert formatted_dates == ["Wednesday 04 Jun", "Thursday 05 Jun", "Friday 06 Jun", "Saturday 07 Jun", "Sunday 08 Jun", "Monday 09 Jun", "Tuesday 10 Jun"]
