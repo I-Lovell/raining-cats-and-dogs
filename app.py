@@ -16,6 +16,10 @@ def get_basic_forecast():
     week = repository.sort_forecast_into_days()
     return render_template('index.html', week=week)
 
+@app.route('/about', methods=['GET'])
+def get_about_page():
+    return render_template('about.html')
+
 
 # ---------- Routes Finish ---------
 
