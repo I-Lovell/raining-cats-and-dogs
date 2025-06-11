@@ -16,9 +16,9 @@
         {% for day in week %}
             <div>
                 <li class="date">date: {{ day.time }}</li>
-                <li class="weather_code">weather code: {{ day.weather_code }}</li>
-                <li class="max_temp">max temp: {{ day.max_temp }}</li>
-                <li class="min_temp">min temp: {{ day.min_temp }}</li>
+                <li class="weather_code"><img src="/static/images/example_icon.png" alt=""> {{ day.weather_code }} </li>
+                <li class="temp">max temp: {{ day.max_temp }}</li>
+                <li class="temp">min temp: {{ day.min_temp }}</li>
             </div>
         {% endfor %}
     </div>

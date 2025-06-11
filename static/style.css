@@ -1,5 +1,6 @@
 body {
     margin: 0px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .header {
@@ -41,8 +42,19 @@ body {
 
 .date {
     grid-column: span 2;
+    text-align: center;
 }
 
 .weather_code {
     grid-column: span 2;
+    text-align: center;
+}
+
+.temp {
+    text-align: center;
+    padding: 1em;
+}
+
+.weather_code img {
+    max-width: 100%;
 }
