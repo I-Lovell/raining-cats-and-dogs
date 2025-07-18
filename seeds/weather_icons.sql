@@ -21,9 +21,9 @@ INSERT INTO cat_icons (code, weather_type, icon_path, alt_text) VALUES (53, 'Mod
 INSERT INTO cat_icons (code, weather_type, icon_path, alt_text) VALUES (55, 'Dense Drizzle', '/static/images/drizzle.png', ' ');
 INSERT INTO cat_icons (code, weather_type, icon_path, alt_text) VALUES (56, 'Light Freezing Drizzle', '/static/images/freezingdrizzle.png', ' ');
 INSERT INTO cat_icons (code, weather_type, icon_path, alt_text) VALUES (57, 'Dense Freezing Drizzle', '/static/images/freezingdrizzle.png', ' ');
-INSERT INTO cat_icons (code, weather_type, icon_path, alt_text) VALUES (61, 'Light Rain', '/static/images/61_lightrain.png', 'A grumpy grey cat reprsenting a rain cloud with one rain drop');
-INSERT INTO cat_icons (code, weather_type, icon_path, alt_text) VALUES (63, 'Moderate Rain', '/static/images/63_moderaterain.png', 'A grumpy grey cat reprsenting a rain cloud with two rain drops');
-INSERT INTO cat_icons (code, weather_type, icon_path, alt_text) VALUES (65, 'Heavy Rain', '/static/images/65_heavyrain.png', 'A grumpy grey cat reprsenting a rain cloud with three rain drops');
+INSERT INTO cat_icons (code, weather_type, icon_path, alt_text) VALUES (61, 'Light Rain', '/static/images/61_lightrain.png', 'A grumpy grey cat representing a rain cloud with one rain drop');
+INSERT INTO cat_icons (code, weather_type, icon_path, alt_text) VALUES (63, 'Moderate Rain', '/static/images/63_moderaterain.png', 'A grumpy grey cat representing a rain cloud with two rain drops');
+INSERT INTO cat_icons (code, weather_type, icon_path, alt_text) VALUES (65, 'Heavy Rain', '/static/images/65_heavyrain.png', 'A grumpy grey cat representing a rain cloud with three rain drops');
 INSERT INTO cat_icons (code, weather_type, icon_path, alt_text) VALUES (66, 'Light Freezing Rain', '/static/images/66_lightfreezingrain.png', ' ');
 INSERT INTO cat_icons (code, weather_type, icon_path, alt_text) VALUES (67, 'Heavy Freezing Rain', '/static/images/65_heavyfreezingrain.png', ' ');
 INSERT INTO cat_icons (code, weather_type, icon_path, alt_text) VALUES (71, 'Light Snow', '/static/images/71_lightsnow.png', ' ');
