@@ -1,7 +1,7 @@
-DROP TABLE IF EXISTS icons;
-DROP SEQUENCE IF EXISTS icons_id_seq;
+DROP TABLE IF EXISTS cat_icons;
+DROP SEQUENCE IF EXISTS cat_icons_id_seq;
 
-CREATE SEQUENCE IF NOT EXISTS icons;
+CREATE SEQUENCE IF NOT EXISTS cat_icons_id_seq;
 CREATE TABLE cat_icons (
     id SERIAL PRIMARY KEY,
     code INT,

@@ -1,18 +1,25 @@
 import os
+from dotenv import load_dotenv
+load_dotenv()
 from flask import Flask, render_template
 from lib.forecast_repository import ForecastRepository
 from lib.forecast import Forecast
 from lib.get_weather import get_weather
+from lib.database_connection import DatabaseConnection
+
+
 
 # Create flask app (new instance of flask class)
 app = Flask(__name__)
 
 # ---------- Routes Start ----------
 
-@app.route('/forecast', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_basic_forecast():
     data = get_weather()
-    repository = ForecastRepository(data)
+    connection = DatabaseConnection(False)
+    connection.connect()
+    repository = ForecastRepository(data, connection)
     week = repository.sort_forecast_into_days()
     return render_template('index.html', week=week)
 
