@@ -33,7 +33,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
       
-      - name: Test with pytest
+      - name: Run tests and check coverage
         env: 
           TEST_DATABASE: test_db
           DB_USER: postgres
@@ -41,5 +41,6 @@ jobs:
           DB_HOST: postgres
           DB_PORT: 5432
         run: |
-          pytest
+          coverage run -m pytest
+          coverage report --fail-under=80
       
