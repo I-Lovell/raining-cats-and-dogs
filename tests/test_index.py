@@ -1,6 +1,11 @@
 import re 
 from playwright.sync_api import Page, expect
 
+def test_about_has_header(page: Page, test_web_address):
+    page.goto(f"http://{test_web_address}/about")
+    header = page.locator("h1")
+    expect(header).to_have_text("About")
+
 def test_has_header(page: Page, test_web_address):
     page.goto(f"http://{test_web_address}/")
 
