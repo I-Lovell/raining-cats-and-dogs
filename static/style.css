@@ -26,7 +26,7 @@ body {
     padding: 1rem;
 }
 
-.week-layout div {
+.day {
     min-height: 20rem;
 
     display: grid;
