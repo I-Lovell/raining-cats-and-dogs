@@ -30,7 +30,7 @@ jobs:
 
       - name: Install Playwright browsers
         run: |
-          playwright install-deps
+          python -m playwright install
       
       - name: Run tests and check coverage
         env: 
