@@ -39,7 +39,7 @@ def test_web_address(xprocess):
 
     xprocess.ensure("flask_test_server", Starter)
 
-    yield f"localhost:{port}"
+    yield f"127.0.0.1:{port}"
 
     xprocess.getinfo("flask_test_server").terminate()
 
