@@ -19,11 +19,19 @@ def test_forecast_repo_constructs(db_connection):
     assert repository.all_weather_codes == [3, 80, 80, 80, 3, 3, 80]
 
 """
+Test forecast repository specify_weather_type method
+calls the expected weather_type, icon_path and alt_text based on a weather code
+"""
+def test_specify_weather_type(db_connection):
+    repository = ForecastRepository(forecast1, db_connection)
+    result = repository.specify_weather_type(3)
+    assert result == [{"weather_type": "Overcast", "icon_path": "/static/images/3_overcast.png", "alt_text": "A chubby grey cat representing a cloud"}]
+
+"""
 Test forecast Repository sort_forecast_into_days method
 corectly sorts 7 days worth of data into a list of seven dictionaries
 """
 def test_sort_forecast_into_days(db_connection):
-    db_connection.seed("seeds/weather_icons.sql")
     repository = ForecastRepository(forecast2, db_connection)
     formatted_forecast = repository.sort_forecast_into_days()
     assert formatted_forecast == [Forecast('Friday 04 Apr', 15.1, 9.7, 0, "Clear Sky", "/static/images/0_clearsky.png", "A happy cat representing the sun"), Forecast('Saturday 05 Apr', 13.7, 12.8, 61, "Light Rain", "/static/images/61_lightrain.png", "A grumpy grey cat representing a rain cloud with one rain drop"), Forecast('Sunday 06 Apr', 21.2, 10.2, 2, "Partly Cloudy", "/static/images/2_partlycloudy.png", "alt_text"), Forecast('Monday 07 Apr', 17.9, 8.1, 0, "Clear Sky", "/static/images/0_clearsky.png", "A happy cat representing the sun"), Forecast('Tuesday 08 Apr', 13.7, 10.5, 51, "Light Drizzle", "/static/images/drizzle.png", "alt_text"), Forecast('Wednesday 09 Apr', 14.4, 7.3, 80, "Light Rain Showers", "/static/images/80_lightrainshowers.png", "A grey cat in a pink shower cap with a few spots of rain"), Forecast('Thursday 10 Apr', 19.2, 9.9, 3, "Overcast", "/static/images/3_overcast.png", "A chubby grey cat representing a cloud")]
@@ -37,12 +45,3 @@ def test_format_date(db_connection):
     formatted_dates = repository.format_date(repository.all_times)
     assert formatted_dates == ["Wednesday 04 Jun", "Thursday 05 Jun", "Friday 06 Jun", "Saturday 07 Jun", "Sunday 08 Jun", "Monday 09 Jun", "Tuesday 10 Jun"]
 
-"""
-Test forecast repository specify_weather_type method
-calls the expected weather_type, icon_path and alt_text based on a weather code
-"""
-def test_specify_weather_type(db_connection):
-    db_connection.seed("seeds/weather_icons.sql") 
-    repository = ForecastRepository(forecast1, db_connection)
-    result = repository.specify_weather_type(3)
-    assert result == [{"weather_type": "Overcast", "icon_path": "/static/images/3_overcast.png", "alt_text": "A chubby grey cat representing a cloud"}]

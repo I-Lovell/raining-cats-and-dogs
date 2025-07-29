@@ -21,7 +21,7 @@ class DatabaseConnection:
     def seed(self, sql_file):
         with self.connection.cursor() as cursor:
             cursor.execute(open(sql_file, "r").read())
-            self.connection.commit
+            self.connection.commit()
 
     def execute(self, query, params=[]):
         with self.connection.cursor() as cursor:

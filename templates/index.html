@@ -14,7 +14,7 @@
 
     <div class="week-layout">
         {% for day in week %}
-            <div>
+            <div class="day">
                 <li class="date">date: {{ day.time }}</li>
                 <li class="weather_code"><img src= "{{ day.icon_path }}" alt= "{{ day.alt_text }}" > {{ day.weather_type }} </li>
                 <li class="temp">max temp: {{ day.max_temp }}</li>
