@@ -1,5 +1,9 @@
 # It's Raining Cats and Dogs!
 
+<div style="text-align: center;">
+<img title="Cloud Cat" alt="A chubby grey cat representing a cloud" src="static/images/3_overcast.png" width="250" height="250">
+</div>
+
 ## Description
 
 It's Raining Cats and Dogs is (or will be) a weather app with cat and dog themed weather icons that you can switch between with a toggle. At the moment I'm still working towards the MVP (a weather app with cat themed icons). The icons are taking me a while to draw!
@@ -33,7 +37,7 @@ If you'd like to use this as the basis for your own weather website here's what 
 
 **Some things to note!**
 
-At the moment the only weather icon you can find in the image folder is an example one with a test drawing I did a while back. There are no other weather icons currently available so you'll need to find or make your own. Icons should be about 300x300px.
+At the moment the only weather icon you can find in the image folder at the moment is for the overcast cloud cat (which I've included as an example). There are no other weather icons currently available so you'll need to find or make your own. Icons should be about 300x300px.
 
 When you add your icons you'll probably also need to update the SQL seed file to reflect your changes (for example, all the current alt_text stored there talks about cat icons, which you may not have!)
 
