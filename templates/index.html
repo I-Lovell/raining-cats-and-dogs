@@ -10,13 +10,14 @@
 
 <div class="header">
     <h1>It's Raining Cats and Dogs!</h1>
+    <a href="http://127.0.0.1:5001/about"><button type="button">About</button></a>
 </div>
 
     <div class="week-layout">
         {% for day in week %}
             <div class="day">
-                <li class="date">date: {{ day.time }}</li>
-                <li class="weather_code"><img src= "{{ day.icon_path }}" alt= "{{ day.alt_text }}" > {{ day.weather_type }} </li>
+                <li class="date">{{ day.time }}</li>
+                <li class="weather"><img src= "{{ day.icon_path }}" alt= "{{ day.alt_text }}" > {{ day.weather_type }} </li>
                 <li class="temp">max temp: {{ day.max_temp }}</li>
                 <li class="temp">min temp: {{ day.min_temp }}</li>
             </div>
