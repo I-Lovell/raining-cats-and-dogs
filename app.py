@@ -17,7 +17,7 @@ app = Flask(__name__)
 @app.route('/', methods=['GET'])
 def get_basic_forecast():
     data = get_weather()
-    connection = DatabaseConnection() # set this to True when testing or pushing to github
+    connection = DatabaseConnection(True) # set this to True when testing or pushing to github
     connection.connect()
     repository = ForecastRepository(data, connection)
     week = repository.sort_forecast_into_days()
