@@ -33,6 +33,9 @@ body {
 
     -webkit-mask-image: url('images/semi_circle.svg');
     -webkit-mask-size: 60px 30px;
+
+    mask-image: url('images/semi_circle.svg');
+    mask-size: 60px 30px;
     
 }
 
