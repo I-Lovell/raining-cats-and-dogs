@@ -80,7 +80,17 @@ body {
     overflow-y: hidden;
 }
 
-.week-layout-fade {
+.week-layout-fade-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1em;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to left, #2d35c8 100%, transparent 100%);
+}
+
+.week-layout-fade-right {
     position: absolute;
     top: 0;
     right: -2rem;
