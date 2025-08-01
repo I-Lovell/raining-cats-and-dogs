@@ -59,9 +59,15 @@ body {
     transition: 0.7s;
 }
 
-.week-layout {
-    margin: 5rem auto;
+.week-layout-wrapper {
+    position: relative;
     width: min(90%, 75rem);
+    margin: 5rem auto 0 auto;
+}
+
+.week-layout {
+    position: relative;
+    width: 100%;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 2fr repeat(6, 1fr);
@@ -69,6 +75,29 @@ body {
 
     background-color: #2d35c8;
     padding: 1rem;
+
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.week-layout-fade-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1em;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to left, #2d35c8 100%, transparent 100%);
+}
+
+.week-layout-fade-right {
+    position: absolute;
+    top: 0;
+    right: -2rem;
+    width: 1em;
+    height: 100%;
+    pointer-events: none;
+    background: linear-gradient(to left, #2d35c8 100%, transparent 100%);
 }
 
 .day {
