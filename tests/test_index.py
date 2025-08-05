@@ -11,7 +11,7 @@ def test_has_header(page: Page, test_web_address):
 
     header = page.locator("h1")
 
-    expect(header).to_have_text("It's Raining Cats and Dogs!")
+    expect(header).to_have_text("Its Raining Cats and Dogs!")
 
 def test_seven_days_display_as_grid(page: Page, test_web_address, db_connection):
 
