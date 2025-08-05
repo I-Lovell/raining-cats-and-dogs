@@ -1,0 +1,8 @@
+/* This is where you'll find styling that's specific to the about page
+   mostly it's to style the text, the header, footer and overall look of the
+   page are handled in style.css */
+
+.main-content {
+    padding: 3rem 10rem 3rem 10rem;
+    font-size: 1.5em;
+}
