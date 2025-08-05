@@ -1,3 +1,4 @@
+/* Overall page layout defined here */
 body {
     padding: 0;
     margin: 0px;
@@ -9,10 +10,12 @@ body {
     flex-direction: column;
 }
 
+/* This is where the main background colour is defined */
 :root {
     --body-bg: #f2f8f6
 }
 
+/* colour layout and position of header */
 .header {
     background-color: #75C3FA;
     padding: 1%;
@@ -23,7 +26,8 @@ body {
 
     position: relative;
 }
-
+/* clipping mask for the header (the thing that makes the body of the webpage below
+ look bumpy like a cloud where it meets the header) */
 .header::after {
     --curve-color: var(--body-bg);
     content: '';
@@ -44,11 +48,13 @@ body {
     
 }
 
+/* Styling for webpage title */
 .header h1 {
     text-align: center;
     font-size: 2.5rem;
 }
 
+/* Styling for the 'about' button */
 .header button {
     font-family: monospace;
     background-color: #f2f8f6;
@@ -59,17 +65,25 @@ body {
     min-width: 120px;
 }
 
+/* make the 'about' button change color on mouse hover */
 .header button:hover {
     background-color: #16df9c;
     transition: 0.7s;
 }
 
+/* wrap the week layout, 
+this helps for the css below that stops our days spilling 
+outside the purple border they live in 
+(note: the 'purple border' is actually just the background 
+color of the week-layout div) */
 .week-layout-wrapper {
     position: relative;
     width: min(90%, 75rem);
     margin: 5rem auto 5rem auto;
 }
 
+/* lays out the days in a nice grid, 
+today's forecast is larger than the rest if the view port is large enough */
 .week-layout {
     position: relative;
     width: 100%;
@@ -85,6 +99,8 @@ body {
     overflow-y: hidden;
 }
 
+/* This puts a purple bar over the left edge of the week layout div, 
+it stops everything looking messy when you scroll left to right */
 .week-layout-fade-left {
     position: absolute;
     top: 0;
@@ -95,6 +111,7 @@ body {
     background: linear-gradient(to left, #2d35c8 100%, transparent 100%);
 }
 
+/* Same as above but for the right side of week-layout */
 .week-layout-fade-right {
     position: absolute;
     top: 0;
@@ -105,6 +122,8 @@ body {
     background: linear-gradient(to left, #2d35c8 100%, transparent 100%);
 }
 
+/* Styling for an individual day inside the way layout 
+each day element is also a grid! */
 .day {
     min-height: 20rem;
 
@@ -118,6 +137,8 @@ body {
     list-style-type: none;
 }
 
+/* everything below affects how the data for each day 
+is displayed in the grid layout */
 .date {
     grid-column: span 2;
     text-align: center;
@@ -137,6 +158,7 @@ body {
     max-width: 100%;
 }
 
+/* Contains the footer so we can put another cloud shaped clipping mask on it */
 .footer-container {
     margin-top: auto;
     position: relative;
@@ -144,6 +166,9 @@ body {
     background-color: #DDDADF;
 }
 
+/* This applies another clipping mask to the footer to create a bumpy cloud shaped border 
+(note: the svg file here is for the negative space around the bump and 
+is the same color as the background) */
 .footer-container::before {
     --curve-color: var(--body-bg);
     content: '';
@@ -164,6 +189,7 @@ body {
     
 }
 
+/* styling for footer */
 .footer {
     width: 80%;
     height: 10vh;
