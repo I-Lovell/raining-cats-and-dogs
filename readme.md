@@ -43,6 +43,7 @@ TEST_DATABASE= <test_database_name>
 ```
 
 11. Run pytest and make sure all the tests pass!
+12. Don't forget to delete or rewrite the 'About' page! It's currently all about me and this project! 
 
 **Some things to note!**
 
