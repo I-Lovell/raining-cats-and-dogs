@@ -54,6 +54,41 @@ body {
     font-size: 2.5rem;
 }
 
+.dropdown button {
+    font-family: monospace;
+    background-color: #f2f8f6;
+    padding: 10px;
+    min-height: 30px;
+    min-width: 120px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown a{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px;
+    min-height: 30px;
+    min-width: 120px;
+}
+
+.content {
+    display: none;
+    position: absolute;
+    background-color: #DDDADF;
+}
+
+.dropdown:hover .content {
+    display: block;
+}
+
+.dropdown:hover {
+    background-color: #16df9c;
+}
+
+.dropdown a:hover {
+    background-color: #16df9c;
+}
 /* Styling for the 'about' button */
 .header button {
     font-family: monospace;
@@ -63,6 +98,7 @@ body {
     border-radius: 10px;
     min-height: 30px;
     min-width: 120px;
+    cursor: pointer;
 }
 
 /* make the 'about' button change color on mouse hover */
