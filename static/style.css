@@ -54,6 +54,12 @@ body {
     font-size: 2.5rem;
 }
 
+.menu-buttons {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
 .dropdown button {
     font-family: monospace;
     background-color: #f2f8f6;
@@ -159,7 +165,7 @@ it stops everything looking messy when you scroll left to right */
     background: linear-gradient(to left, #2d35c8 100%, transparent 100%);
 }
 
-/* Styling for an individual day inside the way layout 
+/* Styling for an individual day inside the week layout 
 each day element is also a grid! */
 .day {
     min-height: 20rem;
