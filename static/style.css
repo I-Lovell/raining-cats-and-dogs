@@ -73,6 +73,7 @@ body {
 }
 
 .content {
+    z-index: 1;
     display: none;
     position: absolute;
     background-color: #DDDADF;
@@ -90,7 +91,7 @@ body {
     background-color: #16df9c;
 }
 /* Styling for the 'about' button */
-.header button {
+.about-home-button button {
     font-family: monospace;
     background-color: #f2f8f6;
     border: 2px solid #2d35c8;
@@ -102,7 +103,7 @@ body {
 }
 
 /* make the 'about' button change color on mouse hover */
-.header button:hover {
+.about-home-button button:hover {
     background-color: #16df9c;
     transition: 0.7s;
 }
