@@ -54,12 +54,16 @@ body {
     font-size: 2.5rem;
 }
 
+/* This is styling for the div 
+that contains the location dropdown and about button 
+organising it like this ensure they sit neatly on the right of the screen*/
 .menu-buttons {
     display: flex;
     justify-content: space-between;
     gap: 1rem;
 }
 
+/* Styling for the button users hover over to see the location dropdown list */
 .dropdown button {
     font-family: monospace;
     background-color: #f2f8f6;
@@ -70,6 +74,8 @@ body {
     cursor: pointer;
     box-sizing: border-box;
 }
+
+/* Eventually there will be links to click, this styles them */
 .dropdown a {
     display: block;
     color: black;
@@ -80,6 +86,7 @@ body {
     box-sizing: border-box;
 }
 
+/* This stops the dropdown list going behind the cloud clipping mask */
 .content {
     z-index: 1;
     display: none;
@@ -87,14 +94,12 @@ body {
     background-color: #DDDADF;
 }
 
+/* The content of the dropdown list appears on hover! */
 .dropdown:hover .content {
     display: block;
 }
 
-.dropdown:hover {
-    background-color: #16df9c;
-}
-
+/* Makes the background of the dropdown element turn green when hovered over */
 .dropdown .location-button:hover {
     background-color: #16df9c;
 }
