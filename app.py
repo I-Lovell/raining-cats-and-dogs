@@ -15,16 +15,16 @@ app = Flask(__name__)
 # ---------- Routes Start ----------
 
 @app.route('/', methods=['GET'])
-def get_basic_forecast():
+def get_basic_forecast() -> str:
     data = get_weather()
-    connection = DatabaseConnection(True) # set this to True when testing or pushing to github
+    connection = DatabaseConnection() # set this to True when testing or pushing to github
     connection.connect()
     repository = ForecastRepository(data, connection)
     week = repository.sort_forecast_into_days()
     return render_template('index.html', week=week)
 
 @app.route('/about', methods=['GET'])
-def get_about_page():
+def get_about_page() -> str:
     return render_template('about.html')
 
 
