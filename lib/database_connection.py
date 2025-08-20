@@ -1,10 +1,11 @@
 import os
 import psycopg
 from psycopg.rows import dict_row
+from typing import Any
 
 
 class DatabaseConnection:
-    def __init__(self, test_mode=False):
+    def __init__(self, test_mode: bool=False):
         self._dev = os.getenv("DEV_DATABASE")
         self._test = os.getenv("TEST_DATABASE")
         self.test_mode = test_mode
@@ -18,12 +19,14 @@ class DatabaseConnection:
         except psycopg.OperationalError:
             raise Exception("database connection failed")
     
-    def seed(self, sql_file):
+    def seed(self, sql_file: str):
         with self.connection.cursor() as cursor:
             cursor.execute(open(sql_file, "r").read())
             self.connection.commit()
 
-    def execute(self, query, params=[]):
+    def execute(self, query: str, params: list[str | int | float | None] | None = None) -> list[dict[str, Any]]:
+        if params is None:
+            params = []
         with self.connection.cursor() as cursor:
             cursor.execute(query, params)
             result = cursor.fetchall()
