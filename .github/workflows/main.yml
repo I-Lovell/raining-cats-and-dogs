@@ -5,7 +5,7 @@ on: push
 jobs:
   container-job:
     runs-on: ubuntu-latest
-    container: python:3.11
+
     services:
       postgres:
         image: postgres:15.12
@@ -13,6 +13,8 @@ jobs:
           POSTGRES_DB: test_db
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
@@ -22,6 +24,11 @@ jobs:
     steps:
       - name: Check out code
         uses: actions/checkout@v4 
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
 
       - name: Install dependencies
         run: |
@@ -38,7 +45,7 @@ jobs:
           TEST_DATABASE: test_db
           DB_USER: postgres
           DB_PASSWORD: postgres
-          DB_HOST: postgres
+          DB_HOST: localhost
           DB_PORT: 5432
         run: |
           coverage run -m pytest

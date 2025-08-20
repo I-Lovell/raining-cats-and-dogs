@@ -25,7 +25,7 @@ calls the expected weather_type, icon_path and alt_text based on a weather code
 def test_specify_weather_type(db_connection):
     repository = ForecastRepository(forecast1, db_connection)
     result = repository.specify_weather_type(3)
-    assert result == [{"weather_type": "Overcast", "icon_path": "/static/images/3_overcast.png", "alt_text": "A chubby grey cat representing a cloud"}]
+    assert result == {"weather_type": "Overcast", "icon_path": "/static/images/3_overcast.png", "alt_text": "A chubby grey cat representing a cloud"}
 
 """
 Test forecast Repository sort_forecast_into_days method
