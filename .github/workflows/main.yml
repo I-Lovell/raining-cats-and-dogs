@@ -31,7 +31,7 @@ jobs:
       - name: Install Playwright browsers
         run: |
           playwright install
-          playwright install-deps
+          npx playwright install-deps
       
       - name: Run tests and check coverage
         env: 
